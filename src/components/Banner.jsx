@@ -5,6 +5,7 @@ import styled from "styled-components";
 import heroBcg2 from "../assets/hero-img.png";
 import img1 from "../assets/banner1.png";
 import img2 from "../assets/banner3.png";
+import img3 from "../assets/bannerrrr.jpg";
 import Error from "./Error";
 import Loading from "./Loading";
 import Product from "./Product";
@@ -12,6 +13,32 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Banner = () => {
+  const backgroundContainerStyle = {
+    position: "relative",
+    height: "60vh",
+    width: "100vw",
+    backgroundImage: `url(${img3})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  };
+  const gradientOverlayStyle = {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    background: "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)",
+    zIndex: 1,
+  };
+  const contentStyle = {
+    position: "relative",
+    zIndex: 2,
+    color: "white",
+    textAlign: "center",
+  };
   useEffect(() => {
     AOS.init({
       once: true,
@@ -24,37 +51,32 @@ const Banner = () => {
     featured_products: featured,
   } = useProductsContext();
 
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <Error />;
-  }
-
   return (
     <Wrapper className="section">
-      <div className="section-center pt-10">
-        <div className="grid grid-cols-3">
-          <div className="flex items-center col-span-2">
-            <h1 className="text-8xl font-black text-black uppercase bannerText" data-aos="fade-left" data-aos-duration="3000">
-              Beyond <span className="text-red-900">Footwear</span>
-            </h1>
-          </div>
+      <div style={backgroundContainerStyle}>
+        <div style={gradientOverlayStyle}></div>
+        <div style={contentStyle}>
+          <h1 className="text-white font-black mb-2 bannerText text-8xl uppercase">
+            Own The Floor
+          </h1>
           <div className="flex justify-center">
-            <img src={img1} alt="" data-aos="flip-right" data-aos-duration="3000" />
+            <p className="max-w-xl text-white bannerText text-lg font-medium ">
+              Step into footwear that sets you apart. With a perfect balance of
+              style and comfort, our collection is curated to keep you moving in
+              confidence. Find your fit and make every step count.
+            </p>
           </div>
-          <div className="flex justify-center">
-            <img src={img2} alt="" data-aos="flip-left" data-aos-duration="3000" />
-          </div>
-          <div className="flex items-center col-span-2">
-            <div className="w-full">
-              <h1 className="text-8xl text-center font-black text-black uppercase bannerText"data-aos="fade-right" data-aos-duration="3000">
-                It is a
-              </h1>
-              <p className="text-8xl text-right font-black text-green-900 uppercase bannerText"data-aos="fade-up" data-aos-duration="3000">
-                Lifestyle..
-              </p>
-            </div>
+          <div class="flex justify-center">
+            <Link
+              to="/products"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="button font-medium bannerText border-2 rounded-sm transition-all ease-linear duration-500"
+              id="button-5"
+            >
+              <div id="translate"></div>
+              <span className="text-white">SHOP NOW</span>
+            </Link>
           </div>
         </div>
       </div>
@@ -63,7 +85,6 @@ const Banner = () => {
 };
 
 const Wrapper = styled.section`
-  background: white;
   .featured {
     margin: 4rem auto;
     display: grid;

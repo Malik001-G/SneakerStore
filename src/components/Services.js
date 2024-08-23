@@ -37,7 +37,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-2 mt-3">
+        <div className="grid grid-cols-2 gap-2 mt-3 mb-24">
           <div data-aos="fade-right" data-aos-duration="3000">
             <img src={img2} alt="" />
             <p className="max-w-md uppercase py-5 font-bold text-black text-2xl bannerText">
@@ -57,6 +57,12 @@ const Services = () => {
           </div>
           <div className="-mt-20" data-aos="fade-up" data-aos-duration="3000">
             <img src={img5} alt="" />
+            <p className="uppercase font-bold text-right text-black text-2xl bannerText">
+              Discover footwear
+            </p>
+            <p className="uppercase font-bold text-right text-black text-2xl bannerText">
+              that redefines your look—
+            </p>
           </div>
         </div>
       </div>
