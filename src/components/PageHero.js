@@ -3,10 +3,12 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 const PageHero = ({ title, product }) => {
   return (
-    <Wrapper>
+    <Wrapper className="bg-gray-50 shadow-sm">
       <div className="section-center">
         <h3>
-          <Link to="/">Home</Link>
+          <Link to="/" className="font-medium">
+            Home
+          </Link>
           {product && <Link to="/products">/Products</Link>}/{title}
         </h3>
       </div>
@@ -15,9 +17,8 @@ const PageHero = ({ title, product }) => {
 };
 
 const Wrapper = styled.section`
-  background: var(--clr-primary-10);
   width: 100%;
-  min-height: 20vh;
+  min-height: 15vh;
   display: flex;
   align-items: center;
 

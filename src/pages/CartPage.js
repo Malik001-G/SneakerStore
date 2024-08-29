@@ -8,9 +8,9 @@ const CartPage = () => {
   const { cart } = useCartContext();
   if (cart.length < 1) {
     return (
-      <Wrapper className="page-100">
+      <Wrapper className="page-cart">
         <div className="empty">
-          <h2>Your cart is empty</h2>
+          <h2 className="bannerText capitalize mb-10">Your cart is empty</h2>
           <Link to="/products" className="btn">
             fill it
           </Link>
@@ -32,7 +32,6 @@ const Wrapper = styled.main`
   .empty {
     text-align: center;
     h2 {
-      margin-bottom: 1rem;
       text-transform: none;
     }
   }

@@ -10,12 +10,11 @@ const CheckoutPage = () => {
   return (
     <main>
       <PageHero title="checkout" />
-      <Wrapper className="page">
+      <Wrapper className="page-cart">
         {cart.length < 1 ? (
           <div className="empty">
-            <h2>your cart is empty</h2>
+            <h2 className="bannerText mb-10 capitalize">your cart is empty</h2>
             <Link to="/products" className="btn">
-              {" "}
               fill it
             </Link>
           </div>

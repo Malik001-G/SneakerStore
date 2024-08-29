@@ -30,14 +30,14 @@ const Sort = () => {
           <BsList />
         </button>
       </div>
-      <p>{products.length} products found</p>
+      <p className="bannerText">{products.length} products found</p>
       <hr />
-      <form>
+      <form className="bannerText">
         <label htmlFor="sort">sort by</label>
         <select
           name="sort"
           id="sort"
-          className="sort-input"
+          className="sort-input focus:ring-0 transition-all ease-linear duration-300 outline-none"
           value={sort}
           onChange={updateSort}
         >

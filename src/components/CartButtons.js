@@ -13,7 +13,6 @@ const CartButtons = () => {
   return (
     <Wrapper className="cart-btn-wrapper">
       <Link to="/cart" className="cart-btn text-sm" onClick={closeSidebar}>
-        Stash
         <span className="cart-container">
           <FaShoppingCart />
           <span className="cart-value">{total_items}</span>
@@ -22,7 +21,7 @@ const CartButtons = () => {
       {myUser ? (
         <button
           type="button"
-          className="auth-btn text-sm"
+          className="auth-btn text-base bannerText"
           onClick={() => {
             clearCart();
             logout({ returnTo: window.location.origin });
@@ -33,7 +32,7 @@ const CartButtons = () => {
       ) : (
         <button
           type="button"
-          className="auth-btn text-sm"
+          className="auth-btn text-base bannerText"
           onClick={loginWithRedirect}
         >
           Login <FaUserPlus />
@@ -47,7 +46,6 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  width: 225px;
 
   .cart-btn {
     color: white;
@@ -63,6 +61,7 @@ const Wrapper = styled.div`
     position: relative;
     svg {
       height: 1.6rem;
+      width: 1.8em;
       margin-left: 5px;
     }
   }
@@ -70,7 +69,7 @@ const Wrapper = styled.div`
     position: absolute;
     top: -10px;
     right: -16px;
-    background: var(--clr-primary-5);
+    background: #7f1d1d;
     width: 8px;
     height: 10px;
     display: flex;
@@ -90,6 +89,7 @@ const Wrapper = styled.div`
     color: white;
     letter-spacing: var(--spacing);
     svg {
+      width: 1.2em;
       margin-left: 5px;
     }
   }

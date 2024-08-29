@@ -30,12 +30,12 @@ const Filters = () => {
       <div className="content">
         <form onSubmit={(e) => e.preventDefault()}>
           {/* search Input */}
-          <div className="form-control">
+          <div className="form-control w-full">
             <input
               type="text"
               name="text"
               placeholder="search"
-              className="search-input"
+              className="search-input bannerText w-full focus:ring-1 focus:ring-red-900 transition-all ease-linear duration-300 outline-none"
               value={text}
               onChange={updateFilters}
             />
@@ -44,7 +44,7 @@ const Filters = () => {
 
           {/* categories */}
           <div className="form-control">
-            <h5>category</h5>
+            <h5 className="font-semibold bannerText">Brand</h5>
             <div>
               {categories.map((c, index) => {
                 return (
@@ -54,7 +54,9 @@ const Filters = () => {
                     name="category"
                     type="button"
                     className={`${
-                      category === c.toLowerCase() ? "active" : null
+                      category === c.toLowerCase()
+                        ? "active"
+                        : "hover:shadow-md shadow-white bannerText pl-5 w-full text-left transition-all ease-linear duration-500"
                     }`}
                   >
                     {c}
@@ -67,16 +69,20 @@ const Filters = () => {
 
           {/* companies */}
           <div className="form-control">
-            <h5>company</h5>
+            <h5 className="font-semibold bannerText">Category</h5>
             <select
               name="company"
               value={company}
               onChange={updateFilters}
-              className="company"
+              className="company capitalize w-full bannerText focus:ring-1 focus:ring-red-900 transition-all ease-linear duration-300 outline-none"
             >
               {companies.map((c, index) => {
                 return (
-                  <option key={index} value={c}>
+                  <option
+                    key={index}
+                    className="capitalize transition-all ease-linear duration-500"
+                    value={c}
+                  >
                     {c}
                   </option>
                 );
@@ -87,7 +93,7 @@ const Filters = () => {
 
           {/* colors */}
           <div className="form-control">
-            <h5>colors</h5>
+            <h5 className="font-semibold bannerText">colors</h5>
             <div className="colors">
               {colors.map((c, index) => {
                 if (c === "all") {
@@ -126,11 +132,12 @@ const Filters = () => {
 
           {/* price */}
           <div className="form-control">
-            <h5>price</h5>
-            <p className="price">{formatPrice(price)}</p>
+            <h5 className="font-semibold bannerText">price</h5>
+            <p className="price bannerText">{formatPrice(price)}</p>
             <input
               type="range"
               name="price"
+              className="w-full"
               onChange={updateFilters}
               min={min_price}
               max={max_price}
@@ -141,7 +148,9 @@ const Filters = () => {
 
           {/* shipping */}
           <div className="form-control shipping">
-            <label htmlFor="shipping">free shipping</label>
+            <label htmlFor="shipping" className="font-semibold bannerText">
+              free shipping
+            </label>
             <input
               type="checkbox"
               name="shipping"
@@ -152,7 +161,9 @@ const Filters = () => {
           </div>
           {/* end of shipping */}
         </form>
-        <button type="button" className="clear-btn" onClick={clearFilters}>clear filters</button>
+        <button type="button" className="clear-btn bannerText" onClick={clearFilters}>
+          clear filters
+        </button>
       </div>
     </Wrapper>
   );
@@ -179,7 +190,7 @@ const Wrapper = styled.section`
   button {
     display: block;
     margin: 0.25em 0;
-    padding: 0.25rem 0;
+    padding: 0.25rem 0.25rem;
     text-transform: capitalize;
     background: transparent;
     border: none;
@@ -196,6 +207,12 @@ const Wrapper = styled.section`
     border-radius: var(--radius);
     border-color: transparent;
     padding: 0.25rem;
+  }
+  .company option {
+    padding: 5px;
+  }
+  .company option:hover {
+    background-color: #fef2f2 !important;
   }
   .colors {
     display: flex;

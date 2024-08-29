@@ -17,7 +17,7 @@ const Nav = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={logo} alt="" className="w-20" />
+            <img src={logo} alt="" className="w-16" />
           </Link>
           <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />
@@ -28,7 +28,9 @@ const Nav = () => {
             const { id, text, url } = link;
             return (
               <li key={id}>
-                <Link to={url}>{text}</Link>
+                <Link className="rounded-b-md" to={url}>
+                  {text}
+                </Link>
               </li>
             );
           })}
@@ -59,9 +61,6 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    img {
-      margin-left: -15px;
-    }
   }
   .nav-toggle {
     background: transparent;
@@ -100,7 +99,7 @@ const NavContainer = styled.nav`
         letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
-          border-bottom: 2px solid var(--clr-primary-7);
+          border-bottom: 2px solid #7f1d1d;
         }
       }
     }

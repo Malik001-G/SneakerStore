@@ -38,13 +38,6 @@ const ImageGallery = () => {
     featured_products: featured,
   } = useProductsContext();
 
-  if (loading) {
-    return <Loading />;
-  }
-  if (error) {
-    return <Error />;
-  }
-
   return (
     <Wrapper className="section" data-aos="fade-up" data-aos-duration="2000">
       <div className="section-center">

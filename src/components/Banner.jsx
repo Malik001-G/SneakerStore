@@ -66,16 +66,13 @@ const Banner = () => {
               confidence. Find your fit and make every step count.
             </p>
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center mt-8">
             <Link
               to="/products"
-              data-aos="fade-up"
-              data-aos-duration="3000"
-              className="button font-medium bannerText border-2 rounded-sm transition-all ease-linear duration-500"
+              className="text-gray-200 bg-red-900 hover:shadow-2xl shadow-white transition-all ease-linear duration-700  font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
               id="button-5"
             >
-              <div id="translate"></div>
-              <span className="text-white">SHOP NOW</span>
+              SHOP NOW
             </Link>
           </div>
         </div>

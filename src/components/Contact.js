@@ -5,12 +5,13 @@ const Contact = () => {
   return (
     <Wrapper>
       <div className="section-center">
-        <h3>Join our newsletter and get 20% off</h3>
+        <h3 className="bannerText">Join our newsletter and get 20% off</h3>
         <div className="content">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam fugit
-            id et vero consequatur? Sed perspiciatis aliquam consectetur autem
-            corrupti!
+            Sign up for our newsletter and instantly save 20% on your next pair
+            of kicks! Be the first to know about new arrivals, limited releases,
+            and special deals—because great style starts with staying in the
+            loop
           </p>
           <form
             action="https://formspree.io/f/mkgwnglz"
@@ -19,11 +20,15 @@ const Contact = () => {
           >
             <input
               type="email"
-              className="form-input"
+              className="form-input bg-gray-100 bannerText focus:ring-0 outline-none"
               name="_replyto"
               placeholder="enter email"
+              required
             />
-            <button type="submit" className="submit-btn">
+            <button
+              type="submit"
+              className="bg-red-900 outline-none bannerText submit-btn text-gray-200"
+            >
               subscribe
             </button>
           </form>
@@ -33,7 +38,6 @@ const Contact = () => {
   );
 };
 const Wrapper = styled.section`
-  padding: 5rem 0;
   h3 {
     text-transform: none;
   }
@@ -53,7 +57,7 @@ const Wrapper = styled.section`
   .submit-btn {
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--clr-black);
+    border: none;
   }
   .form-input {
     border-right: none;
@@ -70,12 +74,10 @@ const Wrapper = styled.section`
     text-transform: capitalize;
   }
   .submit-btn {
-    background: var(--clr-primary-5);
     text-transform: capitalize;
     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
-    color: var(--clr-black);
   }
   .submit-btn:hover {
     color: var(--clr-white);

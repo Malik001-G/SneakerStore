@@ -5,7 +5,7 @@ const Footer = () => {
     <Wrapper>
       <h5>
         &copy; {new Date().getFullYear()}
-        <span> ComfySloth</span>
+        <span className="text-red-900 font-bold"> Ultra Sneakers</span>
       </h5>
       <h5>All rights reserved.</h5>
     </Wrapper>
@@ -20,9 +20,6 @@ const Wrapper = styled.footer`
   align-items: center;
   background: var(--clr-black);
   text-align: center;
-  span {
-    color: var(--clr-primary-5);
-  }
   h5 {
     color: var(--clr-white);
     margin: 0.1rem;

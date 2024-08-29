@@ -25,8 +25,7 @@ exports.handler = async (event, context, cb) => {
         images,
       } = fields;
       const { url } = images[0];
-      console.log(url);
-
+      
       return {
         id,
         featured,
