@@ -8,6 +8,7 @@ const Footer = () => {
         <span className="text-red-900 font-bold"> Ultra Sneakers</span>
       </h5>
       <h5>All rights reserved.</h5>
+      <h5> HOL Community ❤️. </h5>
     </Wrapper>
   );
 };

@@ -1,14 +1,8 @@
 import React, { useEffect } from "react";
-import { useProductsContext } from "../context/products_context";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import heroBcg2 from "../assets/hero-img.png";
-import img1 from "../assets/banner1.png";
-import img2 from "../assets/banner3.png";
 import img3 from "../assets/bannerrrr.jpg";
-import Error from "./Error";
-import Loading from "./Loading";
-import Product from "./Product";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -45,11 +39,6 @@ const Banner = () => {
     });
     AOS.refresh();
   }, []);
-  const {
-    products_loading: loading,
-    products_error: error,
-    featured_products: featured,
-  } = useProductsContext();
 
   return (
     <Wrapper className="section">
@@ -69,7 +58,7 @@ const Banner = () => {
           <div class="flex justify-center mt-8">
             <Link
               to="/products"
-              className="text-gray-200 bg-red-900 hover:shadow-2xl shadow-white transition-all ease-linear duration-700  font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
+              className="text-gray-200 outline-none bg-red-900 hover:shadow-2xl shadow-white transition-all ease-linear duration-700  font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
               id="button-5"
             >
               SHOP NOW
