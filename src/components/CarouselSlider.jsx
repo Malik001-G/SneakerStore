@@ -79,7 +79,7 @@ const Carousel = ({ images }) => {
   }, [currentIndex]);
 
   return (
-    <div className="carousel">
+    <div className="carousel hidden md:block">
       <div className="carousel-images">
         <AnimatePresence>
           <motion.img

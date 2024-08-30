@@ -34,19 +34,23 @@ const FeaturedProducts = () => {
   return (
     <Wrapper className="section" data-aos="fade-up" data-aos-duration="2000">
       <div className="section-center">
-        <div className="flex justify-between">
-          <div className="title uppercase font-extrabold  mb-5">
-            <h2 className="uppercase bannerText text-black"><span class="text-red-900">Trending</span> Kicks</h2>
+        <div className="sm:flex justify-between items-center mb-5 sm:mb-0">
+          <div className="text-left uppercase font-extrabold mb-5">
+            <h2 className="uppercase bannerText text-black">
+              <span class="text-red-900">Trending</span> Kicks
+            </h2>
           </div>
-          <Link
-            to="/products"
-            className="capitalize font-semibold flex gap-2 text-black items-center"
-          >
-            all products <FaArrowRight />
-          </Link>
+          <div className="flex justify-end">
+            <Link
+              to="/products"
+              className="capitalize font-semibold flex gap-2 text-black items-center"
+            >
+              all products <FaArrowRight />
+            </Link>
+          </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-x-14">
+        <div className="space-y-5 md:space-y-0 md:grid md:grid-cols-2 xl:grid-cols-4 gap-8">
           {featured.slice(0, 4).map((product) => {
             return <Product key={product.id} {...product} />;
           })}

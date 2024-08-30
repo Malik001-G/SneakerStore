@@ -30,15 +30,15 @@ const Hero = () => {
         backgroundImage: `url(${svg})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "inherit",
-        backgroundPosition: "right",
+        backgroundPosition: "right bottom",
       }}
     >
-      <section className="section-center section grid grid-cols-2 gap-10">
+      <section className="section-center section md:grid grid-cols-2 gap-10">
         <div>
           <h1
             data-aos="fade-right"
             data-aos-duration="3000"
-            className="font-black text-8xl text-black bannerText uppercase mb-5"
+            className="font-black text-3xl sm:text-5xl lg:text-6xl xl:text-8xl text-black bannerText uppercase mb-5"
           >
             Own Your <span className="text-red-900">Style!</span>
           </h1>

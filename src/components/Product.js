@@ -18,12 +18,12 @@ const Product = ({ image, name, price, id }) => {
         <h5>{name}</h5>
         <p>{formatPrice(price)}</p>
       </footer> */}
-      <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+      <div class="w-full xl:w-72 bg-white shadow-md rounded-xl duration-500 lg:hover:scale-105 lg:hover:shadow-xl">
         <Link to={`/products/${id}`}>
           <img
             src={image}
             alt="Product"
-            class="h-80 w-72 bg-gray-200 object-cover rounded-t-xl"
+            class="h-80 w-full xl:w-72 bg-gray-200 object-cover rounded-t-xl"
           />
           <div class="px-3 py-3 w-72">
             <p class="text-sm font-bold text-black truncate block capitalize">

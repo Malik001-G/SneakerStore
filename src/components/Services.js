@@ -18,18 +18,18 @@ const Services = () => {
   }, []);
   return (
     <Wrapper>
-      <div className="section-center">
-        <div className="grid grid-cols-2">
-          <div>
+      <div className="section-center pt-20">
+        <div className="lg:grid grid-cols-2">
+          <div className="mb-2 lg:mb-0">
             <h2 className="font-bold bannerText max-w-sm text-black uppercase">
               Where Style Meets Comfort
             </h2>
           </div>
-          <div className="flex justify-between">
-            <p className="text-sm bannerText font-semibold">
+          <div className="md:flex justify-between">
+            <p className="text-sm bannerText font-semibold mb-3 md:mb-0">
               Discover The Perfect Fusion
             </p>
-            <p className="max-w-xs text-sm bannerText">
+            <p className="w-full md:max-w-xs text-sm bannerText">
               Shoes that pay homage to the thrill of competition Slip into a
               piece of history and stay comfortable wherever the day may lead.
               Every step connects you to a legacy of sport and style meant for
@@ -37,17 +37,25 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-2 mt-3 mb-24">
-          <div data-aos="fade-right" data-aos-duration="3000">
+        <div className="lg:grid grid-cols-2 gap-2 mt-3 lg:mb-24">
+          <div
+            data-aos="fade-right"
+            className="mb-4 lg:mb-0"
+            data-aos-duration="3000"
+          >
             <img src={img2} alt="" />
-            <p className="max-w-md uppercase py-5 font-bold text-black text-2xl bannerText">
+            <p className="max-w-md uppercase py-5 font-bold text-black tex text-2xl bannerText">
               Elegance, Comfort and trend are the essence of what we offer
             </p>
           </div>
-          <div className="mt-10" data-aos="fade-left" data-aos-duration="3000">
+          <div
+            className="lg:mt-10 mb-4 lg:mb-0"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+          >
             <img src={img3} alt="" />
           </div>
-          <div>
+          <div className="mb-4 lg:mb-0">
             <img
               src={img1}
               data-aos="fade-right"
@@ -55,12 +63,16 @@ const Services = () => {
               alt=""
             />
           </div>
-          <div className="-mt-20" data-aos="fade-up" data-aos-duration="3000">
+          <div
+            className="lg:-mt-20 mb-4 lg:mb-0"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             <img src={img5} alt="" />
-            <p className="uppercase font-bold text-right text-black text-2xl bannerText">
+            <p className="uppercase font-bold text-right text-black text-xl md:text-2xl bannerText">
               Discover footwear
             </p>
-            <p className="uppercase font-bold text-right text-black text-2xl bannerText">
+            <p className="uppercase font-bold text-right text-black text-xl md:text-2xl bannerText">
               that redefines your look—
             </p>
           </div>
@@ -75,8 +87,6 @@ const Wrapper = styled.section`
   h4 {
     color: var(--clr-primary-1);
   }
-  padding: 5rem 0;
-
   background: white;
 
   .header h3 {

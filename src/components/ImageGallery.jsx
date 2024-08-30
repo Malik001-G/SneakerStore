@@ -45,14 +45,14 @@ const ImageGallery = () => {
           <h2 className="uppercase bannerText font-extrabold text-black">
             Sneaker Fiesta
           </h2>
-          <p className="text-black text-lg font-normal bannerText">
+          <p className="text-black text-sm lg:text-lg font-normal bannerText">
             Immerse yourself in a world of endless possibilities. Discover a
             curated selection of footwear, ranging from casual everyday styles
             to high-performance athletic kicks. Our collection is a celebration
             of comfort, style, and innovation.
           </p>
         </div>
-        <div className="grid grid-cols-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4">
           <div className="zoom">
             <img src={img5} alt="" />
           </div>
@@ -68,19 +68,19 @@ const ImageGallery = () => {
           <div className="zoom">
             <img src={img6} alt="" />
           </div>
-          <div className="col-span-2 zoom">
+          <div className="hidden md:block col-span-2 zoom">
             <img src={img15} alt="" />
           </div>
           <div className="zoom">
             <img src={img7} alt="" />
           </div>
-          <div className="-mt-52 zoom">
+          <div className="md:-mt-52 zoom">
             <img src={img8} alt="" />
           </div>
-          <div className="col-span-2">
-            <img src={img16} alt="" />
+          <div className="hidden md:block col-span-2">
+            <img src={img16} alt="" className="hidden lg:block" />
           </div>
-          <div className="-mt-52 zoom">
+          <div className="md:-mt-52 zoom">
             <img src={img13} alt="" />
           </div>
         </div>

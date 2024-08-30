@@ -33,19 +33,19 @@ const Brands = () => {
       <div className="section-center">
         <div className="grid grid-cols-5 gap-5">
           <div class="flex justify-center">
-            <img src={img2} class="w-32 h-24 object-contain" alt="" />
+            <img src={img2} class="w-16 h-16 md:w-20 md:h-20 lg:w-32 lg:h-24 object-contain" alt="" />
           </div>
           <div class="flex justify-center">
-            <img src={img3} class="w-32 h-24 object-contain" alt="" />
+            <img src={img3} class="w-16 h-16 md:w-20 md:h-20 lg:w-32 lg:h-24 object-contain" alt="" />
           </div>
           <div class="flex justify-center">
-            <img src={img1} class="w-32 h-24 object-contain" alt="" />
+            <img src={img1} class="w-16 h-16 md:w-20 md:h-20 lg:w-32 lg:h-24 object-contain" alt="" />
           </div>
           <div class="flex justify-center">
-            <img src={img4} class="w-32 h-24 object-contain" alt="" />
+            <img src={img4} class="w-16 h-16 md:w-20 md:h-20 lg:w-32 lg:h-24 object-contain" alt="" />
           </div>
           <div class="flex justify-center">
-            <img src={img5} class="w-32 h-24 object-contain" alt="" />
+            <img src={img5} class="w-16 h-16 md:w-20 md:h-20 lg:w-32 lg:h-24 object-contain" alt="" />
           </div>
         </div>
       </div>

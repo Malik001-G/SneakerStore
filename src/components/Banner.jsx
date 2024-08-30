@@ -45,11 +45,11 @@ const Banner = () => {
       <div style={backgroundContainerStyle}>
         <div style={gradientOverlayStyle}></div>
         <div style={contentStyle}>
-          <h1 className="text-white font-black mb-2 bannerText text-8xl uppercase">
+          <h1 className="text-white font-black mb-2 bannerText text-4xl md:text-5xl xl:text-8xl uppercase">
             Own The Floor
           </h1>
           <div className="flex justify-center">
-            <p className="max-w-xl text-white bannerText text-lg font-medium ">
+            <p className="max-w-md md:max-w-xl text-white bannerText text-sm md:text-md  lg:text-lg font-medium ">
               Step into footwear that sets you apart. With a perfect balance of
               style and comfort, our collection is curated to keep you moving in
               confidence. Find your fit and make every step count.
