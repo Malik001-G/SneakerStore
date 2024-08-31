@@ -21,7 +21,7 @@ const Stars = ({ stars, reviews }) => {
   });
   return (
     <Wrapper>
-      <div className="stars">
+      <div className="flex">
         {tempStars}
         {/*Manual approach star */}
         {/* <span>

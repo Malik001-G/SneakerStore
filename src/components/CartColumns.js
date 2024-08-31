@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const CartColumns = () => {
   return <Wrapper>
-    <div className="content">
+    <div className="content bannerTExt">
       <h5>item</h5>
       <h5>price</h5>
       <h5>quantity</h5>

@@ -41,7 +41,7 @@ const AddToCart = ({ product }) => {
                 key={index}
                 style={{ background: color }}
                 className={`${
-                  mainColor === color ? "color-btn active" : "color-btn"
+                  mainColor === color ? "color-btn active" : "color-btn border border-gray-400"
                 }`}
                 onClick={() => setMainColor(color)}
               >
@@ -91,7 +91,7 @@ const Wrapper = styled.section`
     border-radius: 50%;
     background: #222;
     margin-right: 0.5rem;
-    border: none;
+    // border: none;
     cursor: pointer;
     opacity: 0.5;
     display: flex;

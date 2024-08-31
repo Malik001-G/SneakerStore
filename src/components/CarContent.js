@@ -8,21 +8,21 @@ import CartTotals from "./CartTotals";
 
 const CartContent = () => {
   const { cart, clearCart } = useCartContext();
-  console.log(cart);
+  // console.log(cart);
   return (
-    <Wrapper className="section section-center ">
+    <Wrapper className="section section-center bannerText">
       <CartColumns />
       {cart.map((item) => {
         return <CartItem key={item.id} {...item} />;
       })}
       <hr />
       <div className="link-container">
-        <Link to="/products" className="link-btn">
+        <Link to="/products" className="link-btn text-xs md:text-sm py-2">
           continue shopping
         </Link>
         <button
           type="button"
-          className="link-btn clear-btn"
+          className="link-btn clear-btn text-xs md:text-sm py-2"
           onClick={clearCart}
         >
           {" "}
@@ -44,7 +44,7 @@ const Wrapper = styled.section`
     border-color: transparent;
     text-transform: capitalize;
     padding: 0.25rem 0.5rem;
-    background: var(--clr-primary-5);
+    background: #7f1d1d;
     color: var(--clr-white);
     border-radius: var(--radius);
     letter-spacing: var(--spacing);

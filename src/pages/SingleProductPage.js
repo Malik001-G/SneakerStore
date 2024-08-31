@@ -39,7 +39,11 @@ const SingleProductPage = () => {
   }, [error]);
 
   if (loading) {
-    return <Loading />;
+    return (
+      <section className="section-singlePage section-center page">
+        <Loading />;
+      </section>
+    );
   }
   if (error) {
     return <Error />;
@@ -59,16 +63,19 @@ const SingleProductPage = () => {
   return (
     <Wrapper>
       <PageHero title={name} product />
-      <div className="section section-center page">
+      <div className="section-singlePage section-center page bannerText">
         <Link to="/products" className="btn">
           back to products
         </Link>
         <div className="product-center">
           <ProductImages images={images} />
           <section className="content">
-            <h2>{name}</h2>
+            <h2 className="font-bold">{name}</h2>
             <Stars stars={stars} reviews={reviews} />
-            <h5 className="price"> {formatPrice(price)}</h5>
+            <h5 className="price text-red-900 font-semibold">
+              {" "}
+              {formatPrice(price)}
+            </h5>
             <p className="desc"> {description}</p>
             <p className="info">
               <span> Available :</span>
@@ -79,7 +86,7 @@ const SingleProductPage = () => {
               {sku}
             </p>
             <p className="info">
-              <span> Brand :</span>
+              <span> Category :</span>
               {company}
             </p>
             <hr />
@@ -98,7 +105,7 @@ const Wrapper = styled.main`
     margin-top: 2rem;
   }
   .price {
-    color: var(--clr-primary-5);
+    // color: var(--clr-primary-5);
   }
   .desc {
     line-height: 2;
@@ -117,7 +124,7 @@ const Wrapper = styled.main`
   @media (min-width: 992px) {
     .product-center {
       grid-template-columns: 1fr 1fr;
-      align-items: center;
+      // align-items: center;
     }
     .price {
       font-size: 1.25rem;

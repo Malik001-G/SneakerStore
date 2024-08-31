@@ -3,22 +3,29 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <Wrapper>
-      <h5>
-        &copy; {new Date().getFullYear()}
-        <span className="text-red-900 font-bold"> Ultra Sneakers</span>
-      </h5>
-      <h5>All rights reserved.</h5>
-      <h5> HOL Community ❤️. </h5>
+      <div className="py-3 bannerText">
+        <div className="flex justify-center gap-2 mb-3">
+          <h5>
+            &copy; {new Date().getFullYear()}
+            <span className="text-red-900 font-bold"> Ultra Sneakers</span>
+          </h5>
+          <h5>All rights reserved.</h5>
+        </div>
+
+        <div>
+          <h5> HOL Community ❤️. </h5>
+        </div>
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.footer`
-  height: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // height: 5rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
   background: var(--clr-black);
   text-align: center;
   h5 {

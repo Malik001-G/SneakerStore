@@ -211,6 +211,9 @@ p {
 .section {
   padding: 5rem 0;
 }
+.section-singlePage {
+  padding: 3rem 0;
+}
 .section-brand {
   padding: 0.3rem 0;
 }
@@ -290,7 +293,7 @@ p {
   padding: 5rem 0;
 }
 .page {
-  min-height: calc(100vh - (20vh + 1rem));
+  min-height: calc(100vh - (20vh));
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");

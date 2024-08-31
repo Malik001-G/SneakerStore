@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Contact = () => {
   return (
     <Wrapper>
-      <div className="section section-center">
+      <div className="py-20 lg:py-0 section-center">
         <h3 className="bannerText">Join our newsletter and get 20% off</h3>
         <div className="content">
           <p>
