@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import svg from "../assets/contact.svg";
+// import svg from "../assets/contact.svg";
 import img1 from "../assets/display1.jpeg";
 import img2 from "../assets/display2.jpeg";
 import img3 from "../assets/display3.jpeg";
-import img4 from "../assets/display4.jpeg";
+// import img4 from "../assets/display4.jpeg";
 import img5 from "../assets/display5.png";
-import { services } from "../utils/constants";
+// import { services } from "../utils/constants";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Services = () => {

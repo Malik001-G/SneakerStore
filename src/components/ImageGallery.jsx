@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
-import { useProductsContext } from "../context/products_context";
-import { Link } from "react-router-dom";
+// import { useProductsContext } from "../context/products_context";
 import styled from "styled-components";
-import heroBcg2 from "../assets/hero-img.png";
-import img1 from "../assets/gallery-center.jpg";
 import img2 from "../assets/gallerya.jpg";
 import img3 from "../assets/galleryb.jpg";
 import img4 from "../assets/galleryc.jpg";
@@ -11,17 +8,10 @@ import img5 from "../assets/galleryd.jpg";
 import img6 from "../assets/gallerye.jpg";
 import img7 from "../assets/galleryf.jpg";
 import img8 from "../assets/galleryg.jpg";
-import img9 from "../assets/galleryh.jpg";
-import img10 from "../assets/galleryi.jpg";
-import img11 from "../assets/galleryj.jpg";
-import img12 from "../assets/galleryk.jpg";
 import img13 from "../assets/galleryl.jpg";
-import img14 from "../assets/gallerym.jpg";
 import img15 from "../assets/new2.jpg";
 import img16 from "../assets/sneakerstore.gif";
-import Error from "./Error";
-import Loading from "./Loading";
-import Product from "./Product";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -32,11 +22,6 @@ const ImageGallery = () => {
     });
     AOS.refresh();
   }, []);
-  const {
-    products_loading: loading,
-    products_error: error,
-    featured_products: featured,
-  } = useProductsContext();
 
   return (
     <Wrapper className="section" data-aos="fade-up" data-aos-duration="2000">

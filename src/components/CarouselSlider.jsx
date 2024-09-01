@@ -30,12 +30,6 @@ const Carousel = ({ images }) => {
     },
   };
 
-  const slidersVariants = {
-    hover: {
-      scale: 1.2,
-      backgroundColor: "#ff00008e",
-    },
-  };
 
   const dotsVariants = {
     initial: {
@@ -56,13 +50,6 @@ const Carousel = ({ images }) => {
     setDirection("right");
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 === images.length ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrevious = () => {
-    setDirection("left");
-    setCurrentIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
     );
   };
 

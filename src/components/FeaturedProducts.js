@@ -3,8 +3,6 @@ import { useProductsContext } from "../context/products_context";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 import styled from "styled-components";
-import heroBcg2 from "../assets/hero-img.png";
-import img1 from "../assets/gallery-center.jpg";
 import Error from "./Error";
 import Loading from "./Loading";
 import Product from "./Product";
