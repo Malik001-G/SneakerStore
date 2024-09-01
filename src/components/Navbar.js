@@ -13,7 +13,7 @@ const Nav = () => {
   const { myUser } = useUserContext();
 
   return (
-    <NavContainer className="bg-[#222] sticky top-0 shadow-lg rounded-b-sm z-50">
+    <NavContainer className="black sticky top-0 shadow-lg rounded-b-sm z-50">
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">

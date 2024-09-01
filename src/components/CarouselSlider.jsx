@@ -30,7 +30,6 @@ const Carousel = ({ images }) => {
     },
   };
 
-
   const dotsVariants = {
     initial: {
       y: 0,
@@ -61,7 +60,7 @@ const Carousel = ({ images }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       handleNext();
-    }, 4000); 
+    }, 4000);
     return () => clearTimeout(timer); // Clear timeout if the component unmounts or currentIndex changes
   }, [currentIndex]);
 
