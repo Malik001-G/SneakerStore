@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Carousel = ({ images }) => {
@@ -45,24 +45,28 @@ const Carousel = ({ images }) => {
     },
   };
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setDirection("right");
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 === images.length ? 0 : prevIndex + 1
     );
-  };
+  }, [images.length]);
 
-  const handleDotClick = (index) => {
-    setDirection(index > currentIndex ? "right" : "left");
-    setCurrentIndex(index);
-  };
+  const handleDotClick = useCallback(
+    (index) => {
+      setDirection(index > currentIndex ? "right" : "left");
+      setCurrentIndex(index);
+    },
+    [currentIndex]
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => {
       handleNext();
     }, 4000);
+
     return () => clearTimeout(timer); // Clear timeout if the component unmounts or currentIndex changes
-  }, [currentIndex]);
+  }, [currentIndex, handleNext]); // Include handleNext in dependencies
 
   return (
     <div className="carousel hidden md:block">
