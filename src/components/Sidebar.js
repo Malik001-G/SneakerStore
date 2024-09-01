@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.svg";
+import logo from "../assets/new_logo.png";
 import { Link } from "react-router-dom";
 import { useProductsContext } from "../context/products_context";
 import { FaTimes } from "react-icons/fa";
@@ -15,7 +15,11 @@ const Sidebar = () => {
   return (
     <SidebarContainer>
       <aside
-        className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
+        className={`${
+          isSidebarOpen
+            ? "sidebar show-sidebar bg-gray-300"
+            : "sidebar bg-gray-300"
+        }`}
       >
         <div className="sidebar-header">
           <img src={logo} className="logo" alt="" />
@@ -42,7 +46,9 @@ const Sidebar = () => {
             </li>
           )}
         </ul>
-        <CartButtons />
+        <div className="px-10">
+          <CartButtons />
+        </div>
       </aside>
     </SidebarContainer>
   );
@@ -60,10 +66,10 @@ const SidebarContainer = styled.div`
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
-    color: var(--clr-primary-5);
+    color: #fff;
     transition: var(--transition);
     cursor: pointer;
-    color: var(--clr-red-dark);
+    color: #fff;
     margin-top: 0.2rem;
   }
   .close-btn:hover {
@@ -100,7 +106,7 @@ const SidebarContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--clr-white);
+    // background: var(--clr-white);
     transition: var(--transition);
     transform: translate(-100%);
     z-index: -1;

@@ -8,7 +8,7 @@ const ProductImages = ({ images = [{ url: "" }] }) => {
     <Wrapper>
       <div className="md:flex gap-5">
       <img src={main.url} alt="main" className="main order-last" />
-      <div className="gallery mt-5 grid grid-cols-5 md:block gap-3 md:space-y-2">
+      <div className="gallery mt-5 md:mt-0 grid grid-cols-5 md:block gap-3 md:space-y-2">
         {images.map((image, index) => {
           return (
             <img
