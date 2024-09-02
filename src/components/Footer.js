@@ -3,17 +3,17 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <Wrapper>
-      <div className="py-3 bannerText">
-        <div className="flex justify-center gap-2 mb-3">
-          <h5>
+      <div className="py-3 bannerText ">
+        <div className="flex justify-center gap-2 mb-1">
+          <p className="mb-0 text-white">
             &copy; {new Date().getFullYear()}
             <span className="text-red-900 font-bold"> Ultra Sneakers</span>
-          </h5>
-          <h5>All rights reserved.</h5>
+          </p>
+          <p className="mb-0 text-white">All rights reserved.</p>
         </div>
 
         <div>
-          <h5> HOL Community ❤️. </h5>
+          <p className="mb-0 text-white font-semibold"> HOL Community ❤️. </p>
         </div>
       </div>
     </Wrapper>

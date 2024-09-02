@@ -49,7 +49,7 @@ const Banner = () => {
             Own The Floor
           </h1>
           <div className="flex justify-center">
-            <p className="max-w-md md:max-w-xl text-white bannerText text-sm md:text-md  lg:text-lg font-medium ">
+            <p className="max-w-md md:max-w-xl text-white bannerText text-sm md:text-md px-4 md:px-2 lg:px-0 lg:text-lg font-medium ">
               Step into footwear that sets you apart. With a perfect balance of
               style and comfort, our collection is curated to keep you moving in
               confidence. Find your fit and make every step count.

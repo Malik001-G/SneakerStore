@@ -97,7 +97,7 @@ const AboutPage = () => {
           <article data-aos="fade-left" data-aos-duration="3000">
             <div className="mb-5">
               <div className="title">
-                <h2 className="text-4xl bannerText font-bold">
+                <h2 className="text-xl md:text-3xl lg:text-4xl bannerText font-bold">
                   It's{" "}
                   <span className="text-green-900 font-black">
                     BACK TO SCHOOL

@@ -92,15 +92,15 @@ const CheckoutForm = () => {
   return (
     <div>
       {succeeded ? (
-        <article>
-          <h4>Thank you</h4>
+        <article className="bannerText">
+          <h4>Thank you for your patronage</h4>
           <h4>Your payment was successful</h4>
           <h4>Redirecting to home page shortly</h4>
         </article>
       ) : (
-        <article>
+        <article className= "bannerText">
           <h4>hello, {myUser && myUser.name}</h4>
-          <p>Your total is {formatPrice(shipping_fee + total_amount)}</p>
+          <p>Your total is <span className="font-bold text-red-900">{formatPrice(shipping_fee + total_amount)}</span> </p>
           <p>Test Card Number : 4242 4242 4242 4242</p>
         </article>
       )}
@@ -124,7 +124,7 @@ const CheckoutForm = () => {
         )}
 
         {/* show a success message upon completion */}
-        <p className={succeeded ? "result-message" : "result-message hidden"}>
+        <p className={succeeded ? "result-message mt-3 bannerText" : "result-message hidden mt-3 bannerText"}>
           Payment Succeeded, see the result in your{" "}
           <a href={`https://dashboard.stripe.com/test/payments`}>
             Stripe dashbaord.
@@ -148,7 +148,7 @@ const StripeCheckout = () => {
 
 const Wrapper = styled.section`
   form {
-    width: 30vw;
+    width: 100%;
     align-self: center;
     box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
       0px 2px 5px 0px rgba(50, 50, 93, 0.1),
