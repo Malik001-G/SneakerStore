@@ -21,14 +21,14 @@ const AboutPage = () => {
       <Wrapper className=" section section-center page-100">
         <div>
           <h1
-            className="text-xl sm:text-2xl text-black md:text-4xl lg:text-5xl xl:text-6xl font-black mb-3 bannerText capitalize"
+            className="text-xl sm:text-2xl text-black md:text-3xl lg:text-5xl font-black mb-5 bannerText capitalize"
             data-aos="fade-down"
             data-aos-duration="3000"
           >
             Don't get caught with fake sneakers
           </h1>
           <h1
-            className="text-xl sm:text-2xl md:text-4xl text-black lg:text-5xl xl:text-6xl font-black text-left lg:text-center bannerText capitalize"
+            className="text-xl sm:text-2xl md:text-3xl text-black lg:text-5xl font-black text-left lg:text-center bannerText capitalize"
             data-aos="fade-left"
             data-aos-duration="3000"
           >
@@ -91,7 +91,11 @@ const AboutPage = () => {
       <Banner />
       <Wrapper className=" pb-20 section-center">
         <div className="lg:grid grid-cols-2 gap-5 mt-8">
-          <div className="mb-3 lg:mb-0" data-aos="fade-right" data-aos-duration="3000">
+          <div
+            className="mb-3 lg:mb-0"
+            data-aos="fade-right"
+            data-aos-duration="3000"
+          >
             <img src={aboutImg3} alt="HorlarOfLagos" />
           </div>
           <article data-aos="fade-left" data-aos-duration="3000">
@@ -160,14 +164,14 @@ const Wrapper = styled.section`
   }
   p {
     line-height: 2;
-    color:#000;
+    color: #000;
     // max-width: 45em;
     // margin: 0 auto;
     // margin-top: 0.2rem;
   }
   .title {
     text-align: left;
-    color:#000;
+    color: #000;
   }
   .underline {
     margin-left: 0;
